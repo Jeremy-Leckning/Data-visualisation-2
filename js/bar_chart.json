@@ -1,6 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": { "text": "Fatalities due to air pollution" },
+    "width": 500,
+    "height": 250,
     "data": {
         "url": "https://raw.githubusercontent.com/Jeremy-Leckning/Data-visualisation-2/main/data/death-rates-from-air-pollution.csv"
     },
@@ -20,12 +22,13 @@
       "spec": {
         "mark": "bar",
         "encoding": {
-            "x": { "field": "Year", "type": "nominal" },
+            "x": { "field": "Year", "type": "nominal", "axis": {"grid": false} },
             "y": {
                 "aggregate": "mean",
                 "field": {"repeat": "layer"},
                 "type": "quantitative",
-                "title": "Deaths per 100k population"
+                "title": "Deaths per 100k population",
+                "axis": {"grid": false}
               },
               "color": {"datum": {"repeat": "layer"}, "type": "nominal", "scale": {"range": ["#a6cee3", "#1f78b4", "#b2df8a", "#33a02c"]}},
                               "tooltip": [
@@ -34,6 +37,11 @@
           {"field": "Caused by outdoor particulate matter", "type": "quantitative"},
           {"field": "Caused by outdoor ozone pollution", "type": "quantitative"}
         ]
-        }
+        },
+        "config": {
+            "view": {"stroke": null},
+            "axis": {"grid": false},
+            "title": {"align": "center", "anchor": "middle", "fontSize": 14}
+          }
       }
     }
