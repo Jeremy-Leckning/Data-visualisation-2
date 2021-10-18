@@ -2,28 +2,93 @@
 <html>
 
 <head>
-    <title> Global Pollution </title>
+    <title> Health effects of Air pollution </title>
 
+    <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
-
     <script src="js/vega_lite_vis.js"></script>
+
+    <!-- Pure library -->
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
 
     <!-- CSS file -->
     <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <h1> Global Pollution</h1>
+    <div id="main"> 
+        <div class="pure-g">
+        
+            <div class="pure-u-1"> <h1>Health effects of Air pollution</h1>
+                <p id="centered_bold"> Visualisation 2 Assignment by Jeremy Leckning </p> 
+            </div>
+    
+            <div class="pure-u-1"> 
+                <p id="centered_text">
+                    Air pollution is contamination of the indoor or outdoor environment by any chemical, physical or biological agent 
+                    that modifies the natural characteristics of the atmosphere. Household combustion devices, motor vehicles, industrial 
+                    facilities and forest fires are common sources of air pollution. Pollutants of major public health concern include 
+                    particulate matter, carbon monoxide, ozone, nitrogen dioxide and sulfur dioxide. Outdoor and indoor air pollution 
+                    cause respiratory and other diseases and is an important source of morbidity and mortality (World Health Organization)  </p>
+            </div>
+    
+    
+            <div class="pure-u-2-3" id="bar_chart"></div>
+            <div  class="pure-u-1-3">
+                <h2> Fatalities by Air pollution category </h2>
+                 <p class="text">
+                    Exposure to high levels of air pollution can cause a variety of adverse health outcomes. 
+                    It increases the risk of respiratory infections, heart disease and lung cancer.  Both short and long term exposure 
+                    to air pollutants have been associated with health impacts. Air pollution kills an estimated seven million 
+                    people worldwide every year. This layered bar chart shows that indoor air pollution is the most deadly as particles
+                    are concentrated in a specific area. Particulate matter is the major reason as to why air pollution is so deadly, with ozone
+                    pollution contributing to a lower amount.</p>  
+            </div>
+    
+            <div class= "pure-u-1"> 
+                <h2> Effects of air pollution globally </h2>
+                <p class="text"> Air pollution kills an estimated seven million people worldwide every year. WHO data shows that almost all of the 
+                    global population (99%) breathe air that exceeds WHO guideline limits containing high levels of pollutants, with 
+                    low- and middle-income countries suffering from the highest exposures. The map below shows the number of deaths (normalised 
+                    per 100k population) of each country from years 1990 to 2017. As can be observed from the map, some countries are very much
+                    affected by air pollution as compared to others and this depends on a number of factors.
+            </div>
 
-    <div id="fatality_trend"></div>
+            <div class="pure-u-1" id="map_visualisation"> </div>
 
-    <div id="map_visualisation"></div>
-    <div id="map_visualisation2"></div>
-    <div id="bar_chart"></div>
+            <div class= "pure-u-1"> 
+                <h2> Air Quality </h2>
+                <p class="text"> The major factor that causes this difference in different countries is the Air quality in their country. The map
+                    below shows the air quality by observing the Particulate Matter 2.5 concentration (micrograms per cubic meter) in each country 
+                    from years 2010 to 2017. As can be observed, there is a direct relation in the 2 maps as the PM 2.5 concentration has a direct 
+                    impact on deaths on the respective population.
+            </div>
+
+            <div class="pure-u-1" id="map_visualisation2"></div>
+
+            <div class="pure-u-1"> 
+                <h2>Glimpse of hope</h2>
+            </div>
+            
+            <div class="pure-u-1-2" id="fatality_trend"> </div>
+    
+            <div  class="pure-u-1-2"> <p class="text"> It is worth to note however that the trend in fatality (per 100k population) is decreasing every year.
+                It is proof that our air quality is getting better. This is especially true for the indoor pollution which is a major
+                part of the causes of death globally as can be observed from the multi-line series. 
+                It is also worth to note that during covid lockdowns, as industrial activities
+                were slowed down, air quality has drastically improved worldwide and thus reduces air pollution globally.</p>  </div>
+    
+            <div class="empty_space"></div>
+        </div>
+    </div>
+  
 
 </body>
 
