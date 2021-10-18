@@ -1,0 +1,33 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": { "text": "Fatalities due to air pollution" },
+  "data": {
+      "url": "https://raw.githubusercontent.com/Jeremy-Leckning/Data-visualisation-2/main/data/death-rates-from-air-pollution.csv"
+  },
+
+  "transform": [
+{"calculate": "datum['Air pollution (total) (deaths per 100,000)']", "as": "Total Deaths"},
+{"calculate": "datum['Indoor air pollution (deaths per 100,000)']", "as": "Caused by indoor pollution"},
+{"calculate": "datum['Outdoor particulate matter (deaths per 100,000)']", "as": "Caused by outdoor particulate matter"},
+{"calculate": "datum['Outdoor ozone pollution (deaths per 100,000)']", "as": "Caused by outdoor ozone pollution"}
+  ],
+
+  "repeat": {"layer": [ "Total Deaths",
+      "Caused by indoor pollution",
+      "Caused by outdoor particulate matter", 
+      "Caused by outdoor ozone pollution"]},
+
+    "spec": {
+      "mark": "line",
+      "encoding": {
+          "x": { "field": "Year", "type": "nominal" },
+          "y": {
+              "aggregate": "mean",
+              "field": {"repeat": "layer"},
+              "type": "quantitative",
+              "title": "Deaths per 100k population"
+            },
+            "color": {"datum": {"repeat": "layer"}, "type": "nominal", "scale": {"range": ["#a6cee3", "#1f78b4", "#b2df8a", "#33a02c"]}}
+      }
+    }
+  }
