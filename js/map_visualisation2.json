@@ -69,7 +69,8 @@
                 "type": "threshold",
                 "domain": [0, 20, 40 , 60, 80],
                 "range": ["#fee5d9", "#fcbba1", "#fc9272", "#fb6a4a", "#de2d26", "#a50f15"]
-            }
+            },
+            "title": "Annual Exposure (micrograms per cubic meter)"
         },
         "tooltip": [
             {
