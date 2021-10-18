@@ -20,28 +20,8 @@ vegaEmbed("#map_visualisation2", vg_3)
   .catch(console.error);
 
 var vg_4 = "js/bar_chart.json";
-vegaEmbed("#bar chart", vg_4)
+vegaEmbed("#bar_chart", vg_4)
   .then(function (result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   })
   .catch(console.error);
-
-// var vg_1 = "cloromap.json";
-// vegaEmbed("#worldmap", vg_1)
-//   .then(function (result) {})
-//   .catch(console.error);
-
-// var vg_1 = "cloromap.json";
-// vegaEmbed("#worldmap", vg_1)
-//   .then(function (result) {})
-//   .catch(console.error);
-
-// var vg_1 = "cloromap.json";
-// vegaEmbed("#worldmap", vg_1)
-//   .then(function (result) {})
-//   .catch(console.error);
-
-// var vg_1 = "cloromap.json";
-// vegaEmbed("#worldmap", vg_1)
-//   .then(function (result) {})
-//   .catch(console.error);
